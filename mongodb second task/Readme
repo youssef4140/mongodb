@@ -1,0 +1,33 @@
+http://localhost:8080/products to access the products collection.
+available methods are:
+    GET, POST, PUT, DELETE
+    GET can be used with a query id to get one product by id 
+    POST requires a body of {
+        name: "string",
+        price: "string",
+      }
+    PUT requires an id and a body of either name, price or both.
+    
+    DELETE requires an id
+
+http://localhost:8080/Users to access the users collection.
+available methods are:
+    GET, POST, PUT, PATCH, DELETE
+
+    GET can be used with a query id to get one user by id 
+
+     POST requires a body of {
+    name: "String",
+    email: "must be a valid email address (regex applied)",
+    password: "string"
+}
+
+PUT requires a query id and a body of the id of the product to be added,
+ note that each product can only be added once using $addToSet
+
+ PATCH requires a query id and a body of name , email or password
+
+
+ DELETE requires a query id.
+
+
